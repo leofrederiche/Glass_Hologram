@@ -1,0 +1,10 @@
+# config/cloudinary.yml
+development:
+  cloud_name: "dg5rdxy4z"
+  api_key: 915965733969333
+  api_secret: TdjM6vDAFsOGA2ZZ_aexHUfEW0k
+
+production:
+  cloud_name: "dg5rdxy4z"
+  api_key: 915965733969333
+  api_secret: TdjM6vDAFsOGA2ZZ_aexHUfEW0k

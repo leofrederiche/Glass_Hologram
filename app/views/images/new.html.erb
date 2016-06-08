@@ -1,0 +1,21 @@
+<div class="container-form">
+
+<h2>Adicionar imagem</h2>
+
+<%= form_for @new_img, url: new_image_path  do |f| %>
+	
+  <div class="field">
+  	<h4 style="color: red;">Atenção! Cada imagem adicionada tem um custo de 5 estrelas.</h4>
+  	<p>Favoritar uma imagem custa 1 estrela.</p>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Adicionar", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+  </div>
+<% end %>
+
+</div>

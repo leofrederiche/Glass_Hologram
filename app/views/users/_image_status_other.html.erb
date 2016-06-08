@@ -1,0 +1,13 @@
+<div class="image-status">
+	<a href="#">
+		<%= image_tag "star-icon" %>
+		<%= $img.favorite %>
+	</a>
+
+	<% unless (Favorite.find_by image_id: $img.id) && (Favorite.find_by user_id: current_user.id) %>
+		<a href="#">
+			<%= image_tag "favorite.png" %>
+			<%= link_to "Favoritar", new_favorite_path($img.id) %>
+		</a>
+	<% end %>
+</div>

@@ -1,0 +1,11 @@
+<div class="image-status">
+	<a href="#">
+		<%= image_tag "star-icon" %>
+		<%= $img.favorite %>
+	</a>
+
+	<a href="#">
+		<%= image_tag "garbage.png" %>
+		<%= link_to "Deletar", image_path($img.id), method: :delete %>
+	</a>
+</div>

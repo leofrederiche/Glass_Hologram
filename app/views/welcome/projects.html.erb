@@ -1,0 +1,41 @@
+
+
+<div class="projects">
+    <div class="project carousel-1" id="carousel-1" target="framename">
+        <a href="#carousel-3"><%= image_tag "carousel-arrow.png", class: "carousel-back carousel-arrow" %></a>
+        <%= image_tag "pyramid-4faces.png", class: "project-image" %>
+        <div>
+            <h2>Pirâmide - 4 Faces</h2>
+            <p>
+                A pirâmide de quatro faces é o projeto mais conhecido entre os projetos de holografia. Além de sua simplicidade, as quatro faces do projeto apresentam uma maior imersão da imagem em nossa realidade, proporcionando aos usuários uma incrível experiência com o 3D. Para utiliza-lo é necessário ter um vídeo ou imagem pré-programado com quatro vista diferentes, uma para cada lado. O projeto utiliza tanto tablets como smartphones.
+            </p>
+        </div>
+        <a href="#carousel-2"><%= image_tag "carousel-arrow.png", class: "carousel-next carousel-arrow" %></a>
+    </div>
+    <div class="project carousel-2" id="carousel-2">
+        <a href="#carousel-1"><%= image_tag "carousel-arrow.png", class: "carousel-back carousel-arrow" %></a>
+        <%= image_tag "pyramid-3faces.png", class: "project-image" %>
+        <div>
+            <h2>Pirâmide - 3 Faces</h2>
+            <p>
+                O projeto pirâmide de três faces traz uma nova demonstração, apresentando um visual mais profissional. A experiência é muito parecida com a pirâmide de quatro faces. O projeto também pode ser utilizado com tablets e smartphones e por sua vez deve ter um vídeo ou imagem bem elaborada com três lados distintos para forma a imagem em três dimensões.
+            </p>
+        </div>
+        <a href="#carousel-3"><%= image_tag "carousel-arrow.png", class: "carousel-next carousel-arrow" %></a>
+    </div>
+    <div class="project carousel-3" id="carousel-3">
+        <a href="#carousel-2"><%= image_tag "carousel-arrow.png", class: "carousel-back carousel-arrow" %></a>
+        <%= image_tag "zed-1face.jpg", class: "project-image" %>
+        <div>
+            <h2>Zed - 1 Face</h2>
+            <p>
+                O projeto de apenas uma face, também conhecido como Zed devido ao seu formato em “Z”, é o mais simples, podendo ser utilizado facilmente para qualquer tipo de vídeo ou imagem sem necessidade de grandes alterações para se ter a perspectiva 3D. Assim como os outros modelos, o Zed também é compatível com tablets e smatphones.
+            </p>
+        </div>
+        <a href="#carousel-1"><%= image_tag "carousel-arrow.png", class: "carousel-next carousel-arrow" %></a>
+    </div>
+</div>
+
+<script>
+    window.location = "#carousel-1";
+</script>

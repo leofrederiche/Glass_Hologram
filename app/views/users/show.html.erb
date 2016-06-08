@@ -1,0 +1,84 @@
+<div class="user-profile">
+
+	<%= image_tag @user.avatar.url, class: "avatar" if @user.avatar.url %>
+
+	<h1><%= @user.name %></h1>
+
+	<!-- Container to status and description -->
+	<div class="container-sd">
+		<% if current_user && current_user.id == @user.id %>
+		<div class="status-bar">
+			<span>
+				<%= image_tag "star-icon.png", class: "star-icon" %>
+				<p><%= @user.coin %></p>
+			</span>
+			
+			<%= link_to 'Editar perfil', edit_user_registration_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored", style: "width: 150px; background: orange;"%>
+		</div>
+		<% end %>
+		<div class="user-description">
+			<p>
+				<%= @user.description %>
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<h2>Galeria pessoal</h2>
+
+<%= link_to "Adicionar nova imagem", new_image_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored", style: "width: 200px;" %>
+
+<div class="container-gallery">
+
+	<% @favorites.reverse.each do |fav| %>
+		<% @img = Image.find_by id: fav.image_id %>
+		<% if @img %>
+			<div class="container-image">
+				<%= image_tag @img.picture.url %>
+				<% $img = @img %>
+				<%= image_status %>
+			</div>
+		<% end %>
+	<% end %>
+
+	<% @images.reverse.each do |img| %>
+		<div class="container-image">
+			<%= image_tag img.picture.url %>
+			<% $img = img %>
+			<%= image_status %>
+		</div>	
+	<% end %>
+
+	<div class="container-image">
+		<%= image_tag "character.gif" %>
+		<div class="image-status">
+			<a href="#">
+				<%= image_tag "star-icon" %>
+				9999
+			</a>
+		</div>
+	</div>
+
+	<div class="container-image">
+		<%= image_tag "passaro.jpg" %>
+		<div class="image-status">
+			<a href="#">
+				<%= image_tag "star-icon" %>
+				9999
+			</a>
+		</div>
+	</div>
+
+	<div class="container-image">
+		<%= image_tag "warrior.gif" %>
+		<div class="image-status">
+			<a href="#">
+				<%= image_tag "star-icon" %>
+				9999
+			</a>
+		</div>
+	</div>
+
+</div>
+

@@ -1,0 +1,11 @@
+<h1>Galeria</h1>
+
+<div class="container-gallery">
+	<% @images.reverse.each do |img| %>
+		<div class="container-image">
+			<%= image_tag img.picture.url %>
+			<% $img = img %>
+			<%= image_status %>
+		</div>	
+	<% end %>
+</div>

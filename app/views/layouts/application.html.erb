@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Holograma em vidro</title>
+  
+  <link rel="icon" href="<%= asset_path 'logo.png' %>">
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <%= stylesheet_link_tag    'mdl', media: 'all', 'data-turbolinks-track' => true %>    
+  <!-- MDL -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <%= stylesheet_link_tag    'material', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'material', 'data-turbolinks-track' => true %>
+  <!-- end MDL -->
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'rwd-font', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="side-left">
+    <%= link_to root_path, style: "flex-grow: 0;" do |root| %>
+      <%= image_tag "logo.png", style: "width: 35px;" %>
+    <% end %>
+    <h4>Holograma em vidro</h4>
+  </div>
+  
+  <div class="side-right">
+    <%= link_to "Projetos", projects_path, class: "mdl-button mdl-js-button mdl-js-ripple-effect", style: "color: #333" %>
+    <%= link_to "Galeria", gallery_path, class: "mdl-button mdl-js-button mdl-js-ripple-effect", style: "color: #333" %>
+
+    <%= user_loged %>
+    
+  </div>
+</nav>
+
+<a href="#" onclick="Menu()" style="color: black" class="menu-button">
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="width: 6em; height: 6em;">
+    <i class="material-icons md-48" style="left: 0.55em; font-size: 80px;">menu</i>
+  </button>
+</a>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<%= yield %>
+
+<footer>
+  <small>@2016 - Holograma em Virdro</small>
+</footer>
+
+</body>
+</html>

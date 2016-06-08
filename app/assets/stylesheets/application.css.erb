@@ -1,0 +1,530 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    background: #fff;
+    color: rgba(0,0,0,0.6);
+}
+
+nav{
+    display: flex; 
+    background: #ecf0f1;
+    align-items: center;
+    padding: 10px 12%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.9);
+    flex-flow: row;
+    z-index: 10;
+}
+
+nav div{
+    display: flex; 
+    align-items: center;
+    flex-grow: 1;
+}
+
+nav div img{
+    margin-right: 20px;
+}
+
+nav .side-left{
+    display: flex; 
+    justify-content: flex-start;
+}
+
+nav .side-right{
+    display: flex; 
+    justify-content: flex-end;
+}
+
+nav .side-right a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 2px;
+}
+
+.mdl-button{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+header{
+    display: flex; 
+    padding: 90px 12%;
+    justify-content: space-between;
+    color: white;
+    text-shadow: 0 0 20px black;
+    background: rgba(0,0,0,0.3);;
+}
+
+video{
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    z-index: -1;
+    flex-grow: 1;
+}
+
+header .context{
+    text-align: left;
+}
+
+header .form{
+    text-align: center;
+    padding-left: 50px;
+}
+
+header .form input[type="text"]{
+    font-size: 18px;
+    padding: 2px;
+}
+
+header .form input[type="email"]{
+    font-size: 18px;
+    padding: 2px;
+}
+
+header .form input[type="password"]{
+    font-size: 18px;
+    padding: 2px;
+}
+
+.features{
+    display: flex; 
+    padding: 30px 12%;
+    flex-grow: 1;
+    text-align: left;
+    background: #FFF;
+    border-bottom: 1px solid #ccc;
+    flex-flow: row nowwrap;
+    align-items: center;
+}
+
+.about{
+    display: flex; 
+    padding: 0px 12%;
+    padding-top: 50px;
+    align-items: center;
+    flex-direction: column;
+    background: #ecf0f1;
+}
+
+.services{
+    display: flex; 
+    background: #ecf0f1;
+    padding: 90px 12%;
+    padding-bottom: 50px;
+    justify-content: space-around;
+}
+
+.services div{
+    padding: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.mid-panel-cl{
+    border-left: 1px solid #999;
+}
+
+.mid-panel-cr{
+    border-right: 1px solid #999;
+}
+
+.services div img{
+    width: 5em;
+}
+
+.peoples-use{
+    text-align: left; 
+    padding: 0;
+    margin: 0;
+    padding-left: 12%;
+    position: relative;
+    top: 50px;
+}
+
+
+.users{
+    display: flex; 
+    text-align: left;
+    padding: 50px 12%;
+}
+
+.users div{
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.border-blue{
+    border-top: 2px solid #7C4DFF;
+    color: #7C4DFF;
+    padding-top: 30px;
+}
+
+.border-red{
+    border-top: 2px solid #e74c3c;
+    color: #e74c3c;
+    padding-top: 30px;
+}
+
+.border-gray{
+    border-top: 2px solid #2ecc71;
+    border-top: 2px solid #607D8B;
+    color: #2ecc71;
+    color: #607D8B;
+    padding-top: 30px;
+}
+
+.company{
+    display: flex; 
+    padding: 0 12%;
+    justify-content: space-between;
+}
+
+.company img{
+    width: 80%;
+    margin: 50px;
+    margin-left: 0;
+    position: relative;
+    float: left;
+}
+
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+}
+
+.project{
+    width: 100%;
+    padding: 0 12%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px
+}
+
+.carousel-1{
+    display: none;
+}
+
+.carousel-2{
+    display: none;
+}
+
+.carousel-3{
+    display: none;
+}
+
+.project:target{
+    display: flex;
+}
+
+.carousel-next{
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    right: 2em;
+}
+
+.carousel-back{
+    left: 2em;
+}
+
+.carousel-arrow{
+    width: 100px;
+    position: absolute;
+    top: 30vh;
+    opacity: 0.6;
+}
+
+.project div{
+    text-align: left;
+    font-size-adjust: 3.6rem;
+    padding: 50px 0;
+}
+
+.project-image{
+    height: 80vh;
+    margin-right: 30px;
+    z-index: -1;
+    border: 1px solid #999;
+}
+
+.alert{
+    color: #fff;
+}
+
+.container-form{
+    position: relative;
+    top: 50px;
+    background-color: #ecf0f1;
+    border-top: 30px solid rgb(124,77,255);
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 400px;
+    box-shadow: 0 20px 20px -15px #95a5a6;
+    margin-bottom: 100px;
+}
+
+.container-form input[type="submit"]{
+    margin: 20px;
+    width: 230px;   
+}
+
+.user-profile{
+    display: flex;
+    padding: 0 12%;
+    border-bottom: 1px solid #ddd;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #3f51b5, rgb(124,77,255));
+    margin-bottom: 90px;
+    text-shadow: 0 0 50px #fff;
+    color: white;
+}
+
+.user-profile div{
+    text-align: left;
+    margin-right: 20px;
+}
+
+.user-profile a{
+    color: black;
+}
+
+.user-description{
+    position: relative;
+    float: right;
+}
+
+.avatar{
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 100%;
+    padding: 2px;
+    margin: 40px;
+    border: 2px solid #555;
+}
+
+.container-sd{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-sd div{
+    margin: 15px 0;
+}
+
+.status-bar{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 1em;
+    top: 10px;
+}
+
+.status-bar span{
+    display: flex;
+}
+
+.status-bar p{
+    font-size: 2.5em;
+}
+
+.star-icon{
+    width: 2em;
+    height: 2em;
+    transition: 0.3s;
+}
+
+.star-icon:hover{
+    background-size: 100% 100%;
+    transform: rotateZ(20deg);
+}
+
+.container-gallery{
+    display: flex;
+    padding: 90px 12%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.container-image{
+    margin: 20px;
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container-image img{
+    background-image: linear-gradient(to bottom, lightblue 35%, #f1c40f 50%, darkgray 50%, gray 80%);
+    max-width: 100%;
+}
+
+.container-image .image-status{
+    padding: 10px;
+    background-color: #3f51b5;
+    position: relative;
+}
+
+.image-status a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.image-status img{
+    width: 20px;
+    margin: 5px;
+    background: transparent;
+}
+
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+footer small{
+    padding: 20px 20%;
+    border-top: 1px solid #999;
+}
+
+@media (max-width: 1000px){
+    nav{
+        flex-direction: column;
+        align-items: stretch;
+        display: none;
+    }
+    
+    nav .side-left{
+        display: none;
+    }
+    
+    nav .side-right{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    nav .side-right a{
+        flex-grow: 1;
+        font-size: 36px !important;
+        margin: 0.2em;
+        padding: 0.5em;
+    }
+    
+    .menu-button{
+        display: block;
+        position: absolute;
+        right: 0;
+        margin: 0.6em;
+        font-size: 3.6rem !important;
+        z-index: 10;
+    }
+    
+    header{
+        flex-direction: column;
+        background-image: url("<%= asset_path 'bg-ss.jpg' %>");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    video{
+        display: none;
+    }
+    
+    header .form{
+        display: none;
+    }
+    
+    .features{
+        flex-flow: row wrap;
+    }
+    
+    .services{
+        flex-direction: column;
+    }
+    
+    .services div{
+        border: none;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        margin-bottom: -1px;
+        font-size: 22px;
+    }
+    
+    .users{
+        flex-direction: column;
+    }
+    
+    .company{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .company img{
+        margin: 50px;
+    }
+    
+    .project{
+        flex-direction: column;
+    }
+    
+    .project-image{
+        width: 133%;
+        position: relative;
+        left: -18%;
+    }
+
+    .user-profile{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-profile div{
+        justify-content: space-around;
+    }
+
+    .container-pn{
+        max-width: 100%;
+        text-align: center !important;
+    }
+}
