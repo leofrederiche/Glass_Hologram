@@ -12,17 +12,13 @@ class FavoriteController < ApplicationController
 			@add_favorite = Favorite.create(favorite_params)
 			@add_favorite.user_id = current_user.id
 			@add_favorite.image_id = @image.id
-			#@add_favorite.save 
 
 			@owner = User.find_by id: @image.user_id
 			@owner.coin = @owner.coin + 1
-			# @owner.save
 
 			current_user.coin = current_user.coin - 1	
-			#current_user.save
 
 			@image.favorite = @image.favorite + 1
-			#@image.save
 
 			if @add_favorite.save && @owner.save && current_user.save && @image.save
 				redirect_to user_path(current_user.id)	

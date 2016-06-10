@@ -24,4 +24,5 @@ module ApplicationHelper
             render "users/image_status_other"
         end
     end
+    
 end
