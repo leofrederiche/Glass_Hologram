@@ -77,18 +77,23 @@ header{
     justify-content: space-between;
     color: white;
     text-shadow: 0 0 20px black;
-    background: rgba(0,0,0,0.3);;
+    
+        background-image: url("<%= asset_path 'bg-ss.jpg' %>");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
 }
 
-video{
-    position: absolute;
-    top: -50px;
-    width: 100%;
-    height: auto;
-    left: 0;
-    z-index: -1;
-    flex-grow: 1;
-}
+/* FOR MORE SPEED */
+/*video{*/
+/*    position: absolute;*/
+/*    top: -50px;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    left: 0;*/
+/*    z-index: -1;*/
+/*    flex-grow: 1;*/
+/*}*/
 
 header .context{
     text-align: left;
